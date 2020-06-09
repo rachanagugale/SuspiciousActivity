@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-app.config['VIDEO_UPLOADS'] = "C:\\Users\\Rachana\\Desktop\\ProjectFrontend\\FlaskApp\\uploads"
+#app.config['VIDEO_UPLOADS'] = "C:\\Users\\Rachana\\Desktop\\ProjectFrontend\\FlaskApp\\uploads"
 
 @app.route("/upload-video", methods=['GET', 'POST'])
 def upload_video():
@@ -13,7 +13,7 @@ def upload_video():
             video = request.files['myvideo']
 
             #video.save(os.path.join(app.config['VIDEO_UPLOADS']), video.filename)
-            video.save("C:\\Users\\Rachana\\Desktop\\ProjectFrontend\\FlaskApp\\uploads\\" + video.filename)
+            #video.save("C:\\Users\\Rachana\\Desktop\\ProjectFrontend\\FlaskApp\\uploads\\" + video.filename)
             print("Image saved")
 
             return redirect(request.url)
